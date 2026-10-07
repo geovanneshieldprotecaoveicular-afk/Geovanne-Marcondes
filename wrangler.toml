@@ -1,6 +1,6 @@
-# tem que ser IGUAL ao nome do Worker no painel do Cloudflare (costuma ser o nome do repositório),
+# tem que ser IGUAL ao nome do Worker no painel do Cloudflare (o do Geovanne é "geovannemarcondes"),
 # senão o deploy cria um segundo Worker.
-name = "geovanne-shield"
+name = "geovannemarcondes"
 compatibility_date = "2025-09-01"
 
 [assets]

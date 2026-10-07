@@ -23,7 +23,7 @@ import Ajustes from "./Ajustes.jsx";
    ===================================================================== */
 
 const LOGO = "/logo.jpg";
-const linkCatalogo = () => `${window.location.origin}/catalogo`;
+const linkCatalogo = () => `${window.location.origin}/catalogo/`;
 
 export default function App() {
   const [sessao, setSessao] = useState(undefined);
@@ -76,7 +76,7 @@ function Login() {
           {erro && <div style={{ color: C.vermelho, fontSize: 14, fontWeight: 600, marginTop: 12 }}>{erro}</div>}
           <Botao type="submit" cheio disabled={indo} {...LARANJA} style={{ marginTop: 18 }} onClick={undefined}>{indo ? "Entrando…" : "Entrar"}</Botao>
         </form>
-        <a href="/catalogo" style={{ color: C.amarelo, textAlign: "center", marginTop: 18, fontSize: 14, fontWeight: 600, textDecoration: "none" }}>
+        <a href="/catalogo/" style={{ color: C.amarelo, textAlign: "center", marginTop: 18, fontSize: 14, fontWeight: 600, textDecoration: "none" }}>
           Ver o catálogo →
         </a>
       </div>
@@ -255,7 +255,7 @@ function Painel({ sessao }) {
                 {a.id === "cotacoes" && novas > 0 && <Selo tipo="laranja">{novas}</Selo>}
               </button>
             ))}
-            <a href="/catalogo" target="_blank" rel="noopener noreferrer" className="sh-toque"
+            <a href="/catalogo/" target="_blank" rel="noopener noreferrer" className="sh-toque"
               style={{ display: "flex", alignItems: "center", gap: 12, padding: "12px 14px", borderRadius: 12, fontSize: 15, fontWeight: 700,
                 color: "rgba(255,255,255,.82)", textDecoration: "none" }}>{ICONES.catalogo}Ver o catálogo</a>
           </nav>
@@ -279,7 +279,7 @@ function Painel({ sessao }) {
           <div style={{ fontSize: 15.5, fontWeight: 800, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{cfg.nome}</div>
           <div style={{ fontSize: 12, color: C.amarelo, fontWeight: 600 }}>{cfg.cargo} · Shield</div>
         </div>
-        <a href="/catalogo" target="_blank" rel="noopener noreferrer" aria-label="Ver o catálogo"
+        <a href="/catalogo/" target="_blank" rel="noopener noreferrer" aria-label="Ver o catálogo"
           style={{ ...S.btnIcone, color: "#fff", border: "1px solid rgba(255,255,255,.35)" }}>{ICONES.catalogo}</a>
       </header>
 
@@ -1119,7 +1119,7 @@ function Fotos({ cfg, acoes }) {
     <div>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
         <h1 style={S.h1}>Fotos do catálogo</h1>
-        <a href="/catalogo" target="_blank" rel="noopener noreferrer" className="sh-toque"
+        <a href="/catalogo/" target="_blank" rel="noopener noreferrer" className="sh-toque"
           style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "9px 12px", borderRadius: 12, border: `1.5px solid ${C.azul}`, color: C.azul,
             fontWeight: 700, fontSize: 13.5, textDecoration: "none", whiteSpace: "nowrap" }}>{ICONES.catalogo}Ver</a>
       </div>

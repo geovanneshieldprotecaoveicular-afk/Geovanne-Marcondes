@@ -45,9 +45,10 @@ React 18 + Vite 5, JS puro, estilos inline, ícones SVG à mão. Fonte **Poppins
 - `src/Ajustes.jsx` — todas as telas de Ajustes.
 - `src/Catalog.jsx` — o catálogo público inteiro (tem cópia própria da trava e do voltar, e a `Guarda`).
 - `public/logo.jpg` — a logo da Shield **como veio** (588×330, é a única que existe).
-- `public/emblema.png`, `favicon.png`, `icon-192.png`, `icon-512.png`, `icon-maskable-512.png`,
-  `apple-touch-icon.png` — o escudo recortado da própria logo (sem redesenhar). Ficam um pouco suaves
-  porque a logo é pequena; se aparecer um arquivo maior, gerar de novo.
+- `public/favicon.png`, `icon-192.png`, `icon-512.png`, `icon-maskable-512.png`, `apple-touch-icon.png` —
+  **a foto do Geovanne** (rosto e ombros, quadrado 95,70 de 500×500 px da `fotos/geovanne.jpg`), pedido do
+  Miguel em 07/10. Script: `Desktop\shild\ferramentas-de-teste\icones-foto.ps1`.
+- `public/emblema.png` — o escudo recortado da logo (sem redesenhar), usado no topo do app e em Meus dados.
 - `public/fotos/geovanne.jpg` — foto dele na frente do escudo (recortada do post do Instagram).
 - `public/fotos/app-shield.jpg` — telas do app Shield **sem o nome, a foto e a placa do associado**
   (no original aparecia "Pedro Calvet Domingos"; foi coberto, e a saudação virou "Olá, associado!").
@@ -158,3 +159,7 @@ mapa) → Encerramento → Rodapé. Barra fixa embaixo depois da abertura. Formu
   conteúdo — o visual foi feito diferente de propósito (concorrência). Fotos do app Shield com o nome do
   associado cobertos. Números da Shield fora (datados). Testado no navegador: app inteiro com banco de
   teste, formulário de 3 etapas até a mensagem do WhatsApp.
+
+- **07/10/2026** — Publicado no Cloudflare Pages (conta do Geovanne), projeto `geovanne-shield`, por upload direto da pasta `SITE-PRONTO-cloudflare` (`npx wrangler pages deploy`). O GitHub ainda não está ligado ao Cloudflare. Ícone do app trocado do escudo para a foto do Geovanne.
+
+- **07/10/2026 (tarde)** — O Geovanne instalou o app pelo Worker ligado ao GitHub (https://geovannemarcondes.geovanneshieldprotecaoveicular.workers.dev), que estava com código antigo: ícone do escudo e `/catalogo` dando 404. Correções: o catálogo virou uma **página de verdade** (`catalogo/index.html` + duas entradas no `vite.config.js`), os links do app apontam para `/catalogo/`, os ícones ganharam **nome novo** (`icone-geovanne-*.png`, o celular guardava o antigo pelo nome) e o `wrangler.toml` passou a `name = "geovannemarcondes"` (o nome do Worker). Publicado direto no Worker e no Pages com `wrangler`. **Falta subir a pasta inteira no GitHub**, senão o próximo build do GitHub volta o código antigo.

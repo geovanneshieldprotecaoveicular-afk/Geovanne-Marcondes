@@ -67,7 +67,7 @@ export default function Ajustes({ cfg, acoes, sessao }) {
       <div style={S.titSecao}>Minha conta</div>
       <div style={{ ...S.card, overflow: "hidden" }}>
         <Linha primeira icone={ICONES.pessoa} titulo="Trocar minha senha" aoTocar={() => abrir("senha")} />
-        <Linha icone={ICONES.catalogo} titulo="Abrir o catálogo" sub={`${window.location.origin}/catalogo`} aoTocar={() => window.open("/catalogo", "_blank")} />
+        <Linha icone={ICONES.catalogo} titulo="Abrir o catálogo" sub={`${window.location.origin}/catalogo/`} aoTocar={() => window.open("/catalogo/", "_blank")} />
         <Linha icone={ICONES.sair} titulo="Sair do app" aoTocar={() => { if (window.confirm("Sair do app?")) api.logout(); }} />
       </div>
 
@@ -268,7 +268,7 @@ function EditorFormulario({ aberto, cfg, acoes, fechar }) {
       </Botao>
       <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 12 }}>
         <Botao pequeno contorno cor={C.suave} onClick={original}>Voltar ao formulário original</Botao>
-        <Botao pequeno contorno cor={C.suave} icone={ICONES.catalogo} onClick={() => window.open("/catalogo", "_blank")}>Ver o catálogo</Botao>
+        <Botao pequeno contorno cor={C.suave} icone={ICONES.catalogo} onClick={() => window.open("/catalogo/", "_blank")}>Ver o catálogo</Botao>
       </div>
       <EditarPergunta p={editando} lista={lista} aoFechar={() => setEditando(null)} gravar={gravarPergunta} avisar={acoes.avisar} />
     </Modal>
