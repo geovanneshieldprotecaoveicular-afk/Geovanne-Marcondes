@@ -3,7 +3,7 @@
 > **Para o Claude (ou quem for continuar):** leia tudo antes de propor mudanças, junto com o
 > PADRAO-APLICATIVOS.md. Ao terminar cada mudança, atualize o "Histórico" e as seções que mudaram.
 >
-> Última atualização: 06/10/2026  
+> Última atualização: 06/10/2026
 
 ## 1. O que é e para quem
 
@@ -163,3 +163,5 @@ mapa) → Encerramento → Rodapé. Barra fixa embaixo depois da abertura. Formu
 - **07/10/2026** — Publicado no Cloudflare Pages (conta do Geovanne), projeto `geovanne-shield`, por upload direto da pasta `SITE-PRONTO-cloudflare` (`npx wrangler pages deploy`). O GitHub ainda não está ligado ao Cloudflare. Ícone do app trocado do escudo para a foto do Geovanne.
 
 - **07/10/2026 (tarde)** — O Geovanne instalou o app pelo Worker ligado ao GitHub (https://geovannemarcondes.geovanneshieldprotecaoveicular.workers.dev), que estava com código antigo: ícone do escudo e `/catalogo` dando 404. Correções: o catálogo virou uma **página de verdade** (`catalogo/index.html` + duas entradas no `vite.config.js`), os links do app apontam para `/catalogo/`, os ícones ganharam **nome novo** (`icone-geovanne-*.png`, o celular guardava o antigo pelo nome) e o `wrangler.toml` passou a `name = "geovannemarcondes"` (o nome do Worker). Publicado direto no Worker e no Pages com `wrangler`. **Falta subir a pasta inteira no GitHub**, senão o próximo build do GitHub volta o código antigo.
+
+- 08/10/2026 - Catalogo: novo painel 'Nao tem CNH?' (componente SemCNH em src/Catalog.jsx, apos Assistencia). Texto orienta o cliente a falar com o Geovanne; botao abre WhatsApp com mensagem pronta.
