@@ -3,7 +3,7 @@
 > **Para o Claude (ou quem for continuar):** leia tudo antes de propor mudanças, junto com o
 > PADRAO-APLICATIVOS.md. Ao terminar cada mudança, atualize o "Histórico" e as seções que mudaram.
 >
-> Última atualização: 06/10/2026
+> Última atualização: 06/10/2026  
 
 ## 1. O que é e para quem
 
