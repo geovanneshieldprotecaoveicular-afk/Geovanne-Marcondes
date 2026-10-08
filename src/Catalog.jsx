@@ -440,6 +440,7 @@ function Vitrine() {
         <Protecao c={c} cotar={cotar} />
         <ComoFunciona />
         <Assistencia c={c} />
+        <SemCNH c={c} />
         <Aplicativo c={c} />
         <Sede c={c} zap={zap} />
         <Final c={c} cotar={cotar} zap={zap} />
@@ -1265,6 +1266,43 @@ function Final({ c, cotar, zap }) {
           )}
         </div>
       </div>
+    </Secao>
+  );
+}
+
+/* ---------------------------------------------------------------------
+   AVISO · proteção para quem não tem CNH
+   --------------------------------------------------------------------- */
+function SemCNH({ c }) {
+  const larga = useTelaLarga();
+  const link = linkWhats(c.whatsapp, "Olá, Geovanne! Quero saber como funciona a proteção veicular para quem não tem CNH.");
+  return (
+    <Secao id="sem-cnh" fundo={C.gelo} style={{ paddingTop: "clamp(48px,9vw,80px)", paddingBottom: "clamp(48px,9vw,80px)" }}>
+      <Surge efeito="foco">
+        <div style={{ position: "relative", borderRadius: 30, overflow: "hidden", background: C.branco, border: `1.5px solid ${C.linha}`,
+          boxShadow: "0 24px 56px rgba(11,31,92,.12)", padding: "clamp(22px,5vw,44px)",
+          display: "grid", gridTemplateColumns: larga ? "auto 1fr auto" : "1fr", gap: larga ? 36 : 20, alignItems: "center" }}>
+          <span aria-hidden="true" style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 7, background: `linear-gradient(180deg, ${C.laranja}, ${C.laranjaForte})` }} />
+          <span style={{ width: 72, height: 72, borderRadius: 22, display: "grid", placeItems: "center", color: "#fff",
+            background: `linear-gradient(135deg, ${C.azul}, ${C.marinho})`, boxShadow: "0 14px 30px rgba(18,56,209,.3)" }}>
+            <span style={{ transform: "scale(1.5)", display: "flex" }}>{I.carro}</span>
+          </span>
+          <div style={{ minWidth: 0 }}>
+            <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 2.2, color: C.azul, textTransform: "uppercase", marginBottom: 8 }}>Informação importante</div>
+            <h2 style={{ margin: "0 0 10px", fontSize: "clamp(22px,5.6vw,32px)", lineHeight: 1.15, fontWeight: 800, letterSpacing: -0.5, color: C.tinta }}>
+              Não tem CNH? <span className="sh-laranja-texto">Não se preocupe!</span>
+            </h2>
+            <p style={{ margin: "0 0 10px", fontSize: "clamp(15px,3.9vw,17px)", lineHeight: 1.65, color: C.cinza }}>
+              A Shield Proteção Veicular também protege veículos de associados que não possuem CNH.
+            </p>
+            <p style={{ margin: 0, fontSize: "clamp(14px,3.7vw,16px)", lineHeight: 1.65, color: C.tinta }}>
+              <b>Existem condições e regras específicas para essa situação.</b> Consulte o regulamento da Shield e fale comigo,
+              o Geovanne, seu consultor: eu te explico direitinho como funciona a proteção para quem não possui CNH.
+            </p>
+          </div>
+          <div><Botao href={link} tipo="whats" cheio={!larga} icone={I.whats} style={{ animation: "none" }}>Falar com o Geovanne</Botao></div>
+        </div>
+      </Surge>
     </Secao>
   );
 }
